@@ -1,0 +1,28 @@
+/* Task 3 - Joshua Shackleton
+
+Task: Building a method to validate user input on form submission
+	Additionally:
+		Validate EmployeeID is numeric, not blank
+		Validate password is not blank
+
+*/
+
+//====== onSubmit event function call =========//
+<form onsubmit="myFunction()">
+  Enter name: <input type="text">
+  <input type="submit">
+</form> 
+
+//====== onSubmit method =======\\
+
+function validateUser() {
+	//Store employeeID and password in variables to easily use them later
+	var employeeID = document.getElemenyByID("employeeID").value;
+	var password - document.getElementByID("password").value;	
+
+	if(password != '' && employeeID != "" && isInteger(employeeID) {
+		return true;
+	} else {
+		return false;
+	}
+}
