@@ -15,14 +15,21 @@ Task: Building a method to validate user input on form submission
 
 //====== onSubmit method =======\\
 
-function validateUser() {
+function validateProperties() {
 	//Store employeeID and password in variables to easily use them later
 	var employeeID = document.getElemenyByID("employeeID").value;
 	var password - document.getElementByID("password").value;	
-
-	if(password != '' && employeeID != "" && isInteger(employeeID) {
-		return true;
-	} else {
-		return false;
+	//is EmployeeID blank
+	if (StringUtils.isBlank(this.apiEmployee.getEmployeeID())) {
+		throw new UnprocessableEntityException("employee id");
+	}
+	//is Password blank
+	if (StringUtils.isBlank(this.apiEmployee.getPassword())) {
+		throw new UnprocessableEntityException("password");
+	}
+	//is EmployeeID numeric
+	if (StringUtils.isBlank(this.apiEmployee.getPassword())) {
+		throw new UnprocessableEntityException("password");
 	}
 }
+
